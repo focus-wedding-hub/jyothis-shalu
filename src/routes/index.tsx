@@ -48,7 +48,7 @@ function Petals() {
         delay: Math.random() * 12,
         duration: 10 + Math.random() * 12,
         size: 8 + Math.random() * 14,
-        hue: Math.random() > 0.5 ? 350 : 15,
+        hue: Math.random() > 0.5 ? 130 : 150,
       })),
     [],
   );
