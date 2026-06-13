@@ -48,7 +48,7 @@ function Petals() {
         delay: Math.random() * 12,
         duration: 10 + Math.random() * 12,
         size: 8 + Math.random() * 14,
-        hue: Math.random() > 0.5 ? 350 : 15,
+        hue: Math.random() > 0.5 ? 130 : 150,
       })),
     [],
   );
@@ -232,7 +232,7 @@ function Index() {
 
 function EnvelopeScreen({ onOpen }: { onOpen: () => void }) {
   return (
-    <div className="relative min-h-screen flex items-center justify-center px-4 py-10 bg-gradient-to-b from-[oklch(0.97_0.025_30)] via-background to-[oklch(0.94_0.05_350)]">
+    <div className="relative min-h-screen flex items-center justify-center px-4 py-10 bg-gradient-to-b from-[oklch(0.97_0.02_145)] via-background to-[oklch(0.94_0.03_100)]">
       <FloralCorner className="absolute top-0 left-0 w-40 sm:w-64 text-primary/60" />
       <FloralCorner className="absolute bottom-0 right-0 w-40 sm:w-64 text-primary/60 rotate-180" />
       <div className="relative max-w-md w-full text-center fade-up">
@@ -242,14 +242,14 @@ function EnvelopeScreen({ onOpen }: { onOpen: () => void }) {
         <div className="font-script text-5xl sm:text-6xl text-primary">Shalu</div>
 
         <div className="relative mx-auto mt-8 envelope-pulse">
-          <div className="relative w-64 h-44 sm:w-80 sm:h-52 mx-auto rounded-md bg-gradient-to-br from-[oklch(0.95_0.03_40)] to-[oklch(0.88_0.06_15)] shadow-2xl border border-primary/20 overflow-hidden">
+          <div className="relative w-64 h-44 sm:w-80 sm:h-52 mx-auto rounded-md bg-gradient-to-br from-[oklch(0.95_0.03_145)] to-[oklch(0.88_0.06_145)] shadow-2xl border border-primary/20 overflow-hidden">
             <div className="absolute inset-0 flex items-center justify-center">
               <img src={coupleIllustration.url} alt="Couple" className="h-32 sm:h-40 object-contain opacity-90" />
             </div>
             <div
               className="absolute top-0 left-0 w-full h-1/2"
               style={{
-                background: "linear-gradient(135deg, oklch(0.75 0.12 15) 0%, oklch(0.65 0.15 20) 100%)",
+                background: "linear-gradient(135deg, oklch(0.75 0.1 145) 0%, oklch(0.65 0.12 145) 100%)",
                 clipPath: "polygon(0 0, 100% 0, 50% 100%)",
               }}
             />
@@ -370,7 +370,7 @@ function Site() {
       </Section>
 
       {/* Engagement */}
-      <Section className="bg-gradient-to-b from-transparent via-[oklch(0.96_0.03_350)] to-transparent">
+      <Section className="bg-gradient-to-b from-transparent via-[oklch(0.96_0.02_145)] to-transparent">
         <SectionTitle eyebrow="Save the Date" title="Engagement" />
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="rounded-2xl overflow-hidden shadow-xl">
