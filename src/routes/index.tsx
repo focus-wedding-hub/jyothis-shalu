@@ -1,23 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useMemo, useRef, useState } from "react";
 import coupleIllustration from "@/assets/couple-illustration.png.asset.json";
-import groomImg from "@/assets/groom.png.asset.json";
-import brideImg from "@/assets/bride.png.asset.json";
-import coupleWatercolor from "@/assets/couple-watercolor.png.asset.json";
-import coupleTraditional from "@/assets/couple-traditional.png.asset.json";
-import focusLogo from "@/assets/focus-media-logo.png.asset.json";
+import { WeddingSite } from "@/components/WeddingSite";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Jyothis & Shalu — Wedding Invitation" },
-      { name: "description", content: "With joyful hearts, we invite you to celebrate the engagement and wedding of Jyothis Koshy Thomas & Shalu Varghese." },
+      { name: "description", content: "Celebrate the engagement and wedding of Jyothis Koshy Thomas & Shalu Varghese." },
       { property: "og:title", content: "Jyothis weds Shalu" },
-      { property: "og:description", content: "Join us as we begin our forever — Engagement 15 August · Wedding 24 August" },
+      { property: "og:description", content: "Engagement 15 August · Wedding 24 August" },
       { property: "og:image", content: coupleIllustration.url },
     ],
   }),
-  component: Index,
+  component: () => <WeddingSite variant="both" />,
 });
 
 const MUSIC_URL =
