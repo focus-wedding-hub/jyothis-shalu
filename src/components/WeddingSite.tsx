@@ -5,11 +5,9 @@ import brideImg from "@/assets/bride-new.png.asset.json";
 import coupleWatercolor from "@/assets/couple-watercolor.png.asset.json";
 import coupleTraditional from "@/assets/couple-traditional.png.asset.json";
 import focusLogo from "@/assets/focus-media-logo.png.asset.json";
+import musicAsset from "@/assets/love-me-like-you-do.mp3.asset.json";
 
-// Replace with a licensed/self-hosted copy of "Love Me Like You Do".
-// Streaming copyrighted audio from an unlicensed CDN is not permitted.
-const MUSIC_URL =
-  "https://cdn.pixabay.com/download/audio/2022/10/25/audio_864e3f0e3a.mp3?filename=relaxing-mountains-rivers-streams-running-water-18178.mp3";
+const MUSIC_URL = musicAsset.url;
 
 const ENGAGEMENT_DATE = new Date("2026-08-15T10:00:00+05:30");
 const WEDDING_DATE = new Date("2026-08-24T11:00:00+05:30");
