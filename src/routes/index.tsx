@@ -6,11 +6,11 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Jyothis & Shalu — Wedding Invitation" },
-      { name: "description", content: "Celebrate the engagement and wedding of Jyothis Koshy Thomas & Shalu Varghese." },
-      { property: "og:title", content: "Jyothis weds Shalu" },
-      { property: "og:description", content: "Engagement 15 August · Wedding 24 August" },
+      { name: "description", content: "Join us for the wedding of Jyothis Koshy Thomas & Shalu Varghese on 24th August at St. Mary's Orthodox Church, Mulakuzha." },
+      { property: "og:title", content: "Jyothis weds Shalu — 24 August" },
+      { property: "og:description", content: "Wedding · Monday, 24 August · 11:00 AM onwards · St. Mary's Orthodox Church, Mulakuzha" },
       { property: "og:image", content: coupleIllustration.url },
     ],
   }),
-  component: () => <WeddingSite variant="both" />,
+  component: () => <WeddingSite variant="wedding" />,
 });
