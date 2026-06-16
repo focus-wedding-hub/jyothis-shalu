@@ -10,17 +10,11 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WeddingRouteImport } from './routes/wedding'
-import { Route as EngagementRouteImport } from './routes/engagement'
 import { Route as IndexRouteImport } from './routes/index'
 
 const WeddingRoute = WeddingRouteImport.update({
   id: '/wedding',
   path: '/wedding',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EngagementRoute = EngagementRouteImport.update({
-  id: '/engagement',
-  path: '/engagement',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -31,31 +25,27 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/engagement': typeof EngagementRoute
   '/wedding': typeof WeddingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/engagement': typeof EngagementRoute
   '/wedding': typeof WeddingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/engagement': typeof EngagementRoute
   '/wedding': typeof WeddingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/engagement' | '/wedding'
+  fullPaths: '/' | '/wedding'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/engagement' | '/wedding'
-  id: '__root__' | '/' | '/engagement' | '/wedding'
+  to: '/' | '/wedding'
+  id: '__root__' | '/' | '/wedding'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  EngagementRoute: typeof EngagementRoute
   WeddingRoute: typeof WeddingRoute
 }
 
@@ -66,13 +56,6 @@ declare module '@tanstack/react-router' {
       path: '/wedding'
       fullPath: '/wedding'
       preLoaderRoute: typeof WeddingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/engagement': {
-      id: '/engagement'
-      path: '/engagement'
-      fullPath: '/engagement'
-      preLoaderRoute: typeof EngagementRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -87,7 +70,6 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  EngagementRoute: EngagementRoute,
   WeddingRoute: WeddingRoute,
 }
 export const routeTree = rootRouteImport
