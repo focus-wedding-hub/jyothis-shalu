@@ -382,7 +382,7 @@ function Site({ variant }: { variant: WeddingVariant }) {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <EventCard
               title="Wedding"
-              dateLabel="Sunday, 24th August · 11:00 AM onwards"
+              dateLabel="Monday, 24th August · 11:00 AM onwards"
               date={WEDDING_DATE}
               venue="St. Mary's Orthodox Church"
               address="Mulakuzha, Kerala"
