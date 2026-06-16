@@ -397,7 +397,7 @@ function Site({ variant }: { variant: WeddingVariant }) {
             <div className="max-w-xl mx-auto">
               <EventCard
                 title="Reception"
-                dateLabel="Sunday, 24th August"
+                dateLabel="Monday, 24th August"
                 date={WEDDING_DATE}
                 venue="St. Thomas Mar Thoma Syrian Church Auditorium"
                 address="Mulakuzha, Kerala"
